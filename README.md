@@ -12,3 +12,5 @@ can go ahead and hack different sensors into their module.
 | :---: | :---: | :---: | 
 | Any Sensor | Recording  | BLE |
 | Any Sensor | Displaying |  BLE |
+
+Feel free to voltron everything -- such is the joy of I2C!
