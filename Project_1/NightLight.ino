@@ -3,6 +3,7 @@
 void setup(){
   Serial.begin(9600);  
   Serial.println("Serial Connection Established");
+  pinMode(4,OUTPUT);
 }
 
 //0x23 is the bh1750's I2C Address as I'm running it in address low mode 
@@ -31,8 +32,14 @@ void loop() {
 
      // "or"-ing with the next byte, we will be able to  
      lux |= Wire.read();
+
  
    Wire.endTransmission();
+
+  if ( lux < 100 ) 
+    digitalWrite(4,HIGH);
+  else 
+    digitalWrite(4, LOW);
 
      Serial.println(lux);
      
