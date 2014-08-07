@@ -24,15 +24,12 @@ void loop() {
     Wire.endTransmission();//wait for acknowledge
   break
   case '2':
-  
-  
-    Wire.beginTransmission(0x23);
-    Wire.write(0x20); //one time sense
-    Wire.endTransmission();
-    delay(500);   
-  
-    Wire.beginTransmission(0x23);
-    Wire.requestFrom(0x23,2); //requesting 2 bytes from the lux sensor
+    //Wire.beginTransmission(0b1010000);
+    Wire.beginTransmission(0x50);
+    Wire.write(0xff); //8bit address 1st half
+    Wire.write(0xff); //8bit address 2nd half
+    Wire.endTransmission();//wait for acknowledge
+    Wire.requestFrom(0x50, (uint8_t) 1);
     break;
   case '3':
     store_this_number++;
