@@ -13,7 +13,7 @@ void setup(){
 
 }
 
-//0b1010 _ _ _  is the fram I2C Address (the last three are "0"'s if you connect address pins, A1 A2 A3, to gnd)  
+//0b1010 _ _ _  is the fram I2C Address of the MB86RC256V (the last three are "0"'s if you connect address pins, A1 A2 A3, to gnd)  
 
 
 void loop() {
