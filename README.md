@@ -14,3 +14,13 @@ can go ahead and hack different sensors into their module.
 | Any Sensor | Displaying |  BLE |
 
 Feel free to voltron everything -- such is the joy of I2C!
+
+
+
+### Follow-up
+
+Creating your own board with I2C Surface Mount chips onto a PCB.
+
+Three stages, 0 is software (which is this class), 1 is designing the Eagle PCB's, two Soldering the PCB's, and 
+
+and then iterations and debugging.
