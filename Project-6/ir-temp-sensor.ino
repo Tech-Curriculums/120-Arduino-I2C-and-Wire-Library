@@ -7,7 +7,7 @@ void setup() {
 
 void loop() {
   uint16_t reading;
-  Wire.beginTransmission(0x5A); // address shifted left by 1
+  Wire.beginTransmission(0x5A); // factory set address
   Wire.write(0x07); // object temperature
   //prevent another master device from transmitting between messages
   Wire.endTransmission(false); //send a restart message after transmission
