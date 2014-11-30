@@ -13,7 +13,7 @@ void loop() {
   Wire.endTransmission(false); //send a restart message after transmission
 
   //Get the temperature in (scaled) kelvin
-  Wire.requestFrom(0x5A, 0x3); // request 3 bytes
+  Wire.requestFrom(0x5A, 3); // request 3 bytes
   reading = Wire.read();
   reading |= Wire.read() << 8; // shift to the left by 8 and bitwise OR
   
