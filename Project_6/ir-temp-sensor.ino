@@ -17,9 +17,10 @@ void loop() {
   reading = Wire.read();
   reading |= Wire.read() << 8; // shift to the left by 8 and bitwise OR
   
-  //Get the third byte, we toss it (temp in first two bytes)
+  //Get the third byte, (error-checking-code) but not doing error checking here
   uint8_t extra = Wire.read(); // toss the third byte
 
+  //from datasheet, div by 50 to get Kelvin, subtracting 273.15 is the K -> C conversion
   double celsius = ((double) reading)*0.02 - 273.15;
 
   Serial.println(celsius); 
