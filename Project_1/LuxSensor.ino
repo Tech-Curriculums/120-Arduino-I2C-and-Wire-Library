@@ -5,7 +5,7 @@ void setup(){
   Serial.println("Serial Connection Established");
 }
 
-//0x23 is the bh1750's I2C Address as I'm running it in address low mode 
+//0x23 is the bh1750's I2C Address as I'm connecting address pins to GND
 //i.e. I am connecting "ADD" to "GND"
 void loop() {
   Wire.beginTransmission(0x23);
